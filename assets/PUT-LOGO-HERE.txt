@@ -1,9 +1,0 @@
-Save your circular DHIR PURE logo in THIS folder as:
-
-    logo.png
-
-That's it. The header, hero medallion, footer favicon and About page
-all point to assets/logo.png automatically.
-
-(Until you add it, the site shows a clean "DHIR PURE — Blessings of God"
-text wordmark instead, so nothing ever looks broken.)
