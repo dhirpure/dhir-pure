@@ -1,44 +1,59 @@
-# DHIR PURE — Website
+# DHIR PURE
 
-Pure handcrafted dhoop & sambrani brand site. Plain **HTML + CSS + JavaScript** — no build step, ready to deploy.
+Static website for DHIR PURE, a brand offering handcrafted, charcoal-free dhoop sticks and sambrani cups. The site presents the product catalogue, brand story, contact information, and customer policies. Product enquiries and orders are directed to WhatsApp.
 
-## 📁 Files
+## Technology
+
+The site uses HTML, CSS, and vanilla JavaScript. There is no framework, package manager, build step, or backend. Fonts are loaded from Google Fonts. The repository does not implement a shopping cart, checkout, payment processing, or order storage.
+
+## Repository structure
+
+```text
+.
+├── index.html                           # Home page and featured products
+├── shop.html                            # Product catalogue and category filters
+├── about.html                           # Brand story and FAQ
+├── contact.html                         # Contact details and WhatsApp enquiry form
+├── terms-and-conditions.html            # Terms and conditions
+├── privacy-policy.html                  # Privacy policy
+├── refund-and-cancellation-policy.html  # Refund and cancellation policy
+├── styles.css                           # Shared styles, responsive layouts, policy styles
+├── script.js                            # Product data and browser interactions
+├── assets/
+│   └── logo.png                         # Brand logo
+└── README.md
 ```
-dhir-pure/
-├── index.html      # Home
-├── shop.html       # Shop (filterable product grid)
-├── about.html      # Brand story + FAQ
-├── contact.html    # Contact + WhatsApp form
-├── styles.css      # All styles (brand colors as CSS variables at top)
-├── script.js       # Products, filters, nav, WhatsApp links
-└── assets/
-    └── logo.png    # ⬅️ ADD YOUR LOGO HERE (see below)
+
+## Local development
+
+Open `index.html` directly in a browser, or serve the repository root with a local static server. For example, with Python installed:
+
+```sh
+python -m http.server 8000
 ```
 
-## ✅ Before you go live — 3 quick edits
+Visit `http://localhost:8000`. Changes to HTML, CSS, or JavaScript can be viewed by refreshing the page.
 
-1. **Add your logo** → save the circular DHIR PURE logo as `assets/logo.png`.
-   *(Until you do, the site shows a clean text wordmark automatically — nothing breaks.)*
+## Code organization
 
-2. **Set your WhatsApp number** → open `script.js`, line ~7:
-   ```js
-   const WHATSAPP_NUMBER = "919999999999"; // ← your number, country code, no + or spaces
-   ```
-   Example for India: `"919812345678"`.
+Each HTML file is a standalone page that loads the shared `styles.css` and `script.js`. Headers, footers, navigation, and contact details are repeated in the page files; update each occurrence when changing shared content.
 
-3. **Update contact details** → search-and-replace these placeholders across the files:
-   - `+91 99999 99999` (footer phone)
-   - `hello@dhirpure.com` (email)
-   - Edit products/prices in the `PRODUCTS` array in `script.js`.
+`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, the FAQ accordion, contact form submission, scroll reveal animations, logo fallback, and the footer year. Product artwork is generated using inline SVG motifs.
 
-## 🎨 Brand colors
-Defined at the top of `styles.css` under `:root` — maroon `#7a1220`, gold `#c9971c`, cream `#fdf9f0`. Change once, applies everywhere.
+WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in each element's `data-wa` attribute. The contact form opens WhatsApp with the entered details in a prefilled message; it does not submit data to a server.
 
-## 🚀 Deploy to Vercel
-1. Push this `dhir-pure` folder to a GitHub repo.
-2. On [vercel.com](https://vercel.com) → **Add New → Project** → import the repo.
-3. Framework preset: **Other** · Root directory: `dhir-pure` (if pushed as a subfolder) or `/` (if pushed alone). No build command needed.
-4. **Deploy** → you get a live `*.vercel.app` URL.
-5. **Custom domain:** Project → Settings → Domains → add your domain and update DNS as Vercel instructs.
+`styles.css` defines brand colors, typography, spacing, and other shared tokens in `:root`. Policy pages use the `policy-page` body class and dedicated reading-layout styles near the end of the stylesheet.
 
-> Tip: if you push only the website, put these files at the repo root so Vercel auto-detects them with zero config.
+## Common changes
+
+- **Products and prices:** Update `PRODUCTS` in `script.js`. The `featured` flag controls inclusion on the home page, and `cat` determines the shop filter category.
+- **WhatsApp destination:** Update `WHATSAPP_NUMBER` in `script.js`, then check phone numbers and direct WhatsApp links in the HTML files.
+- **Contact information:** Update the relevant page content, repeated footers, and policy text together.
+- **Brand styling:** Update the CSS custom properties in `styles.css`. Replace `assets/logo.png` to change the logo.
+- **Policies:** Edit the corresponding policy HTML file and its effective date. Policy links are included in every page footer.
+
+## Validation and hosting
+
+There is no automated test suite configured. Before publishing, check all page links, mobile navigation, product filters, FAQ interactions, and WhatsApp messages. Review policy pages at both mobile and desktop widths.
+
+Deploy the website directory to a static hosting service. Use the directory containing `index.html` as the site root and publish the files as-is; no build command is required.
