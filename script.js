@@ -134,24 +134,6 @@ function setupWhatsApp() {
   });
 }
 
-/* ---- FAQ accordion ---- */
-function setupFAQ() {
-  document.querySelectorAll(".faq-q").forEach(q => {
-    q.addEventListener("click", () => {
-      const item = q.closest(".faq-item");
-      const open = item.classList.contains("open");
-      document.querySelectorAll(".faq-item").forEach(i => {
-        i.classList.remove("open");
-        i.querySelector(".faq-a").style.maxHeight = null;
-      });
-      if (!open) {
-        item.classList.add("open");
-        item.querySelector(".faq-a").style.maxHeight = item.querySelector(".faq-a").scrollHeight + "px";
-      }
-    });
-  });
-}
-
 /* ---- Contact form (no backend → opens WhatsApp with details) ---- */
 function setupForm() {
   const form = document.getElementById("contact-form");
@@ -199,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   setupNav();
   setupWhatsApp();
-  setupFAQ();
   setupForm();
   setupLogoFallback();
   setYear();
