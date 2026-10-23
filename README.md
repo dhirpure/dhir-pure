@@ -12,7 +12,7 @@ The site uses HTML, CSS, and vanilla JavaScript. There is no framework, package 
 .
 ├── index.html                           # Home page and featured products
 ├── shop.html                            # Product catalogue and category filters
-├── about.html                           # Brand story, ingredients, and promise
+├── about.html                           # Brand story, ingredients, promise, and FAQ
 ├── contact.html                         # Contact details and WhatsApp enquiry form
 ├── terms-and-conditions.html            # Terms and conditions
 ├── privacy-policy.html                  # Privacy policy
@@ -38,7 +38,7 @@ Visit `http://localhost:8000`. Changes to HTML, CSS, or JavaScript can be viewed
 
 Each HTML file is a standalone page that loads the shared `styles.css` and `script.js`. Headers, footers, navigation, and contact details are repeated in the page files; update each occurrence when changing shared content.
 
-`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, contact form submission, scroll reveal animations, logo fallback, and the footer year. Product artwork is generated using inline SVG motifs.
+`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, the FAQ accordion, contact form submission, scroll reveal animations, logo fallback, and the footer year. Product artwork is generated using inline SVG motifs.
 
 WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in each element's `data-wa` attribute. The contact form opens WhatsApp with the entered details in a prefilled message; it does not submit data to a server.
 
@@ -54,6 +54,6 @@ WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in ea
 
 ## Validation and hosting
 
-There is no automated test suite configured. Before publishing, check all page links, mobile navigation, product filters, and WhatsApp messages. Review policy pages at both mobile and desktop widths.
+There is no automated test suite configured. Before publishing, check all page links, mobile navigation, product filters, FAQ interactions, and WhatsApp messages. Review policy pages at both mobile and desktop widths.
 
 Deploy the website directory to a static hosting service. Use the directory containing `index.html` as the site root and publish the files as-is; no build command is required.
