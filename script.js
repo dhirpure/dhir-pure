@@ -7,21 +7,21 @@ const BRAND = "DHIR PURE";
 
 /* ---- Product catalogue (edit freely) ---- */
 const PRODUCTS = [
-  { id: "chandan",  name: "Chandan Dhoop Sticks", fragrance: "Sandalwood", cat: "dhoop",   price: 149, mrp: 199, tag: "Bestseller", motif: "sandal", featured: true,
+  { id: "chandan",  name: "Chandan Dhoop Sticks", fragrance: "Sandalwood", cat: "dhoop",   price: 149, mrp: 199,  tag: "",          motif: "sandal", featured: true,
     desc: "Slow-burning sandalwood dhoop for a calm, sacred space." },
-  { id: "gulab",    name: "Gulab Dhoop Sticks",   fragrance: "Rose",       cat: "dhoop",   price: 149, mrp: 199, tag: "",          motif: "rose",  featured: true,
+  { id: "gulab",    name: "Gulab Dhoop Sticks",   fragrance: "Rose",       cat: "dhoop",   price: 149, mrp: 199, tag: "",           motif: "rose",  featured: true,
     desc: "Soft rose notes that linger gently after every aarti." },
-  { id: "kesar",    name: "Kesar Premium Dhoop",  fragrance: "Saffron",    cat: "premium", price: 249, mrp: 320, tag: "Premium",   motif: "saffron", featured: true,
+  { id: "kesar",    name: "Kesar Premium Dhoop",  fragrance: "Saffron",    cat: "premium", price: 249, mrp: 320, tag: "",           motif: "saffron", featured: true,
     desc: "A regal saffron blend crafted for special pujas." },
-  { id: "loban",    name: "Loban Sambrani Cups",  fragrance: "Frankincense", cat: "cups",  price: 179, mrp: 220, tag: "New",       motif: "cup",   featured: true,
+  { id: "loban",    name: "Loban Sambrani Cups",  fragrance: "Frankincense", cat: "cups",  price: 179, mrp: 220, tag: "",           motif: "cup",   featured: true,
     desc: "Charcoal-free sambrani cups that purify the air instantly." },
   { id: "mogra",    name: "Mogra Dhoop Sticks",   fragrance: "Jasmine",    cat: "dhoop",   price: 149, mrp: 199, tag: "",          motif: "jasmine",
     desc: "Fresh mogra fragrance for daily morning prayers." },
   { id: "havan",    name: "Havan Sambrani Cups",  fragrance: "Herbal Havan", cat: "cups",  price: 199, mrp: 260, tag: "",          motif: "cup",
     desc: "A traditional havan blend of herbs, ghee and resins." },
-  { id: "oudh",     name: "Oudh Premium Dhoop",   fragrance: "Agarwood",   cat: "premium", price: 299, mrp: 380, tag: "Premium",   motif: "saffron",
+  { id: "oudh",     name: "Oudh Premium Dhoop",   fragrance: "Agarwood",   cat: "premium", price: 299, mrp: 380, tag: "",   motif: "saffron",
     desc: "Deep, woody oudh for an elevated meditative mood." },
-  { id: "combo",    name: "Bhakti Combo Box",     fragrance: "Assorted",   cat: "combo",   price: 499, mrp: 699, tag: "Value",     motif: "combo",
+  { id: "combo",    name: "Bhakti Combo Box",     fragrance: "Assorted",   cat: "combo",   price: 499, mrp: 699, tag: "",     motif: "combo",
     desc: "A curated box of our four most-loved fragrances." },
 ];
 
