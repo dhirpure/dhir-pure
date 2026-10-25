@@ -19,7 +19,9 @@ const PRODUCTS = [
     "motif": "sandal",
     "featured": true,
     "images": [
-      "assets/products/chandan-front.jpg"
+      "assets/products/chandan-front.jpg",
+      "assets/products/chandan-back-studio.png",
+      "assets/products/chandan-back-original.jpg"
     ],
     "desc": "Welcome a temple-like atmosphere into your home with Chandan Dhoop Sticks, inspired by Vedic traditions and blended with sacred tirth and Dham Raj.",
     "scent": "Rich, woody, and intensely creamy authentic Mysore Sandalwood aroma with sweet, balsamic undertones that linger for hours.",
@@ -31,7 +33,12 @@ const PRODUCTS = [
     "ingredients": "Organic Desi Cow Dung Powder, Premium Cedarwood bark Powder, havan herbs, Pure Jigat powder (Natural Binder), Sacred Tirth & Dham's Raj, Premium Indian Attars, and Essential Perfumes and a DHIRPURE special ingredient.",
     "usage": "Hold the tip of the dhoop stick over a flame until it catches fire. Let it burn for a few seconds, then gently blow out the flame. Place it securely in the provided heat-resistant dhoop holder.",
     "safety": "Keep away from flammable objects, children, and pets. Burn only in well-ventilated areas. Never leave a burning incense stick unattended.",
-    "stock": null
+    "stock": null,
+    "imageLabels": [
+      "Main",
+      "Back",
+      "Original label"
+    ]
   },
   {
     "id": "kasturi",
