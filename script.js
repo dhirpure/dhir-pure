@@ -126,6 +126,30 @@ const PRODUCTS = [
     "usage": "Hold the bottom of the sambrani cup and tilt it. Light the top outer rim evenly all around using a lighter or matchstick until the rim glows red. Place it upright on the included metal/clay stand and let the inner resin catch fire naturally.",
     "safety": "High smoke output product—ideal for open spaces or rooms with good ventilation. Place exclusively on a steady, fireproof metal or earthenware plate. Do not touch while burning as the outer cup gets extremely hot.",
     "stock": null
+  },
+  {
+    "id": "guggal-loban-cups-30",
+    "sku": "DP-SHC-00007",
+    "name": "Guggal Loban Sambrani Havan Cups — 30 Cups",
+    "fragrance": "Guggal & Loban",
+    "cat": "cups",
+    "price": 249,
+    "mrp": 399,
+    "tag": "",
+    "motif": "cup",
+    "featured": true,
+    "images": [],
+    "desc": "Bring a traditional havan fragrance into your space with ready-to-light Guggal Loban Sambrani Havan Cups, filled with resins and herbs.",
+    "scent": "Deeply intense, mystical, and traditional wood-resin aroma. The dry, sweet crystallization of Loban merges perfectly with the deep, grounding, sacred notes of pure Guggal.",
+    "highlights": "A charcoal-free cup made with herbs and cow dung, filled with Guggal and Loban resins. Includes a complimentary metal/clay burner plate.",
+    "packSize": "30 cups + complimentary burner plate",
+    "netWeight": null,
+    "stickSize": null,
+    "boxDimensions": "14 × 8 × 7 cm",
+    "ingredients": "Pure Benzoin (Loban Crystals), Premium Guggul Resin, Bhimseni Camphor, Organic Desi Cow Dung Base, Jatamansi, Sugandhi Kokila, and Sprinkled with Sacred Tirth & Dham Raj.",
+    "usage": "Hold the bottom of the sambrani cup and tilt it. Light the top outer rim evenly all around using a lighter or matchstick until the rim glows red. Place it upright on the included metal/clay stand and let the inner resin catch fire naturally.",
+    "safety": "High smoke output product—ideal for open spaces or rooms with good ventilation. Place exclusively on a steady, fireproof metal or earthenware plate. Do not touch while burning as the outer cup gets extremely hot.",
+    "stock": null
   }
 ];
 
