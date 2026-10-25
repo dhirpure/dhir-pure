@@ -582,3 +582,5 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--maroon); line-heigh
  .product-visual .card-media { aspect-ratio: 3 / 4; max-height: 65svh; }
  .hero-stats { gap: 20px; }
 }
+/* Social icons inherit the footer button foreground for consistent contrast. */
+.socials a { color: #fff; }
