@@ -85,7 +85,9 @@ const PRODUCTS = [
     "motif": "sandal",
     "featured": true,
     "images": [
-      "assets/products/guggal-front.jpg"
+      "assets/products/guggal-front.jpg",
+      "assets/products/guggal-back-studio.png",
+      "assets/products/guggal-back-original.jpg"
     ],
     "desc": "A warm, resinous fragrance inspired by temple rituals, blending Indian Guggal resin with Desi cow dung powder for your daily pooja.",
     "scent": "Warm, intensely resinous, smoky-sweet, and traditional balsamic fragrance reminiscent of ancient temple rituals.",
@@ -97,7 +99,12 @@ const PRODUCTS = [
     "ingredients": "High-Grade Pure Guggal Resin, Organic Desi Cow Dung Powder, Himalayan Deodar Wood Powder, Kapur Kachri, Nagarmotha, Jigat Binder, and Sacred Tirth Raj, and a DHIRPURE special ingredient.",
     "usage": "Ignite the top end of the stick. Allow the flame to steady for 5 seconds, then blow it out to let the resinous smoke rise gently.",
     "safety": "Place on a stable, fireproof surface. Ensure the ash collector is large enough to safely catch all remnants.",
-    "stock": null
+    "stock": null,
+    "imageLabels": [
+      "Main",
+      "Back",
+      "Original label"
+    ]
   },
   {
     "id": "flower-fulwadi",
