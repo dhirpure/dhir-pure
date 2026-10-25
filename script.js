@@ -20,8 +20,7 @@ const PRODUCTS = [
     "featured": true,
     "images": [
       "assets/products/chandan-front.jpg",
-      "assets/products/chandan-back-studio.png",
-      "assets/products/chandan-back-original.jpg"
+      "assets/products/chandan-back-studio.png"
     ],
     "desc": "Welcome a temple-like atmosphere into your home with Chandan Dhoop Sticks, inspired by Vedic traditions and blended with sacred tirth and Dham Raj.",
     "scent": "Rich, woody, and intensely creamy authentic Mysore Sandalwood aroma with sweet, balsamic undertones that linger for hours.",
@@ -35,9 +34,8 @@ const PRODUCTS = [
     "safety": "Keep away from flammable objects, children, and pets. Burn only in well-ventilated areas. Never leave a burning incense stick unattended.",
     "stock": null,
     "imageLabels": [
-      "Main",
-      "Back",
-      "Original label"
+      "Front",
+      "Back"
     ]
   },
   {
@@ -53,8 +51,7 @@ const PRODUCTS = [
     "featured": true,
     "images": [
       "assets/products/kasturi-front.jpg",
-      "assets/products/kasturi-back-studio.png",
-      "assets/products/kasturi-back-original.jpg"
+      "assets/products/kasturi-back-studio.png"
     ],
     "desc": "Bring a deep, earthy musk fragrance to your yoga space, meditation corner or daily pooja with sun-dried Kasturi Dhoop Sticks.",
     "scent": "Deep, earthy musk with a subtle warm, amber sweetness.",
@@ -68,9 +65,8 @@ const PRODUCTS = [
     "safety": "Do not place on painted or plastic surfaces. Ensure the falling white ash lands inside a metallic or ceramic tray. Keep out of reach of children.",
     "stock": null,
     "imageLabels": [
-      "Main",
-      "Back",
-      "Original label"
+      "Front",
+      "Back"
     ]
   },
   {
@@ -86,8 +82,7 @@ const PRODUCTS = [
     "featured": true,
     "images": [
       "assets/products/guggal-front.jpg",
-      "assets/products/guggal-back-studio.png",
-      "assets/products/guggal-back-original.jpg"
+      "assets/products/guggal-back-studio.png"
     ],
     "desc": "A warm, resinous fragrance inspired by temple rituals, blending Indian Guggal resin with Desi cow dung powder for your daily pooja.",
     "scent": "Warm, intensely resinous, smoky-sweet, and traditional balsamic fragrance reminiscent of ancient temple rituals.",
@@ -101,9 +96,8 @@ const PRODUCTS = [
     "safety": "Place on a stable, fireproof surface. Ensure the ash collector is large enough to safely catch all remnants.",
     "stock": null,
     "imageLabels": [
-      "Main",
-      "Back",
-      "Original label"
+      "Front",
+      "Back"
     ]
   },
   {
@@ -119,8 +113,7 @@ const PRODUCTS = [
     "featured": true,
     "images": [
       "assets/products/flower-fulwadi-front.jpg",
-      "assets/products/flower-fulwadi-back-studio.png",
-      "assets/products/flower-fulwadi-back-original.jpg"
+      "assets/products/flower-fulwadi-back-studio.png"
     ],
     "desc": "Welcome the fragrance of a blooming garden with Flower Fulwadi Dhoop Sticks, made with dried sacred flower petals and floral attars.",
     "scent": "A refreshing, uplifting bouquet of sacred Indian flowers (Rose, Marigold, Jasmin) beautifully balanced with clean, sweet floral highlights.",
@@ -134,9 +127,8 @@ const PRODUCTS = [
     "safety": "Keep away from drafts, open windows, or direct fans to maintain a smooth burn. Do not ingest or place in direct contact with skin.",
     "stock": null,
     "imageLabels": [
-      "Main",
-      "Back",
-      "Original label"
+      "Front",
+      "Back"
     ]
   },
   {
