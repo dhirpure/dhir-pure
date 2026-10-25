@@ -18,7 +18,9 @@ const PRODUCTS = [
     "tag": "",
     "motif": "sandal",
     "featured": true,
-    "images": [],
+    "images": [
+      "assets/products/chandan-front.jpg"
+    ],
     "desc": "Welcome a temple-like atmosphere into your home with Chandan Dhoop Sticks, inspired by Vedic traditions and blended with sacred tirth and Dham Raj.",
     "scent": "Rich, woody, and intensely creamy authentic Mysore Sandalwood aroma with sweet, balsamic undertones that linger for hours.",
     "highlights": "Charcoal-free and bamboo-less, with sacred Dham Raj and a delicate white ash.",
@@ -42,7 +44,9 @@ const PRODUCTS = [
     "tag": "",
     "motif": "sandal",
     "featured": true,
-    "images": [],
+    "images": [
+      "assets/products/kasturi-front.jpg"
+    ],
     "desc": "Bring a deep, earthy musk fragrance to your yoga space, meditation corner or daily pooja with sun-dried Kasturi Dhoop Sticks.",
     "scent": "Deep, earthy musk with a subtle warm, amber sweetness.",
     "highlights": "Charcoal-free and bamboo-less, with sacred tirth elements and natural plant-based resins.",
@@ -66,7 +70,9 @@ const PRODUCTS = [
     "tag": "",
     "motif": "sandal",
     "featured": true,
-    "images": [],
+    "images": [
+      "assets/products/guggal-front.jpg"
+    ],
     "desc": "A warm, resinous fragrance inspired by temple rituals, blending Indian Guggal resin with Desi cow dung powder for your daily pooja.",
     "scent": "Warm, intensely resinous, smoky-sweet, and traditional balsamic fragrance reminiscent of ancient temple rituals.",
     "highlights": "Made with premium Indian Guggal resin and Desi cow dung powder, without charcoal.",
@@ -90,7 +96,9 @@ const PRODUCTS = [
     "tag": "",
     "motif": "sandal",
     "featured": true,
-    "images": [],
+    "images": [
+      "assets/products/flower-fulwadi-front.jpg"
+    ],
     "desc": "Welcome the fragrance of a blooming garden with Flower Fulwadi Dhoop Sticks, made with dried sacred flower petals and floral attars.",
     "scent": "A refreshing, uplifting bouquet of sacred Indian flowers (Rose, Marigold, Jasmin) beautifully balanced with clean, sweet floral highlights.",
     "highlights": "Made with upcycled sacred flower petals, without bamboo or charcoal.",
