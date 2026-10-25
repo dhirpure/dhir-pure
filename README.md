@@ -1,6 +1,6 @@
-# DHIR PURE
+# DHIRPURE
 
-Static website for DHIR PURE, a brand offering charcoal-free dhoop sticks and sambrani cups. The site presents the product catalogue, brand story, contact information, and customer policies. Product enquiries and orders are directed to WhatsApp.
+Static website for DHIRPURE, a brand offering charcoal-free dhoop sticks and sambrani cups. The site presents the product catalogue, brand story, contact information, and customer policies. Product enquiries and orders are directed to WhatsApp.
 
 ## Technology
 

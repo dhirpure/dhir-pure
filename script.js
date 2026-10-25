@@ -1,9 +1,9 @@
 /* =========================================================
-   DHIR PURE — site script
+   DHIRPURE — site script
    EDIT THIS NUMBER → your WhatsApp business number (with country code, no + or spaces)
    ========================================================= */
 const WHATSAPP_NUMBER = "917424918600"; // country code + number, no + or spaces
-const BRAND = "DHIR PURE";
+const BRAND = "DHIRPURE";
 
 /* ---- Product catalogue (edit freely) ---- */
 const PRODUCTS = [
@@ -302,7 +302,7 @@ function setupLogoFallback() {
     img.addEventListener("error", () => {
       const wrap = document.createElement("span");
       wrap.className = "brand-text";
-      wrap.innerHTML = `<b>DHIR PURE</b><span>Blessings of God</span>`;
+      wrap.innerHTML = `<b>DHIRPURE</b><span>Blessings of God</span>`;
       img.replaceWith(wrap);
     });
   });

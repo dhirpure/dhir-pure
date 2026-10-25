@@ -1,5 +1,5 @@
 /* =========================================================
-   DHIR PURE — Blessings of God
+   DHIRPURE — Blessings of God
    Brand palette: Maroon · White/Cream · Golden
    ========================================================= */
 
@@ -442,4 +442,3 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--maroon); line-heigh
 
 /* Trademark styling for prominent brand names and the header logo. */
 .trademark { font-family: var(--font-body); font-size: .45em; font-weight: 500; line-height: 0; vertical-align: super; margin-left: .12em; letter-spacing: 0; }
-.brand-trademark { align-self: flex-start; margin: 5px 0 0 -9px; color: var(--maroon); font-family: var(--font-body); font-size: .65rem; font-weight: 500; line-height: 1; }
