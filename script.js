@@ -111,7 +111,9 @@ const PRODUCTS = [
     "motif": "sandal",
     "featured": true,
     "images": [
-      "assets/products/flower-fulwadi-front.jpg"
+      "assets/products/flower-fulwadi-front.jpg",
+      "assets/products/flower-fulwadi-back-studio.png",
+      "assets/products/flower-fulwadi-back-original.jpg"
     ],
     "desc": "Welcome the fragrance of a blooming garden with Flower Fulwadi Dhoop Sticks, made with dried sacred flower petals and floral attars.",
     "scent": "A refreshing, uplifting bouquet of sacred Indian flowers (Rose, Marigold, Jasmin) beautifully balanced with clean, sweet floral highlights.",
@@ -123,7 +125,12 @@ const PRODUCTS = [
     "ingredients": "Dried Sacred Flower Petals, Himalayan Deodar Wood Powder, Organic Cow Dung Powder, Pure Mogra & Rose Attars, Jigat Natural Binder, and Blessed Dham Raj, and a DHIRPURE special ingredient.",
     "usage": "Burn the tip of the stick till a small flame appears. Gently fan or blow out the flame to let the floral essential oils vaporize smoothly.",
     "safety": "Keep away from drafts, open windows, or direct fans to maintain a smooth burn. Do not ingest or place in direct contact with skin.",
-    "stock": null
+    "stock": null,
+    "imageLabels": [
+      "Main",
+      "Back",
+      "Original label"
+    ]
   },
   {
     "id": "guggal-loban-cups",
