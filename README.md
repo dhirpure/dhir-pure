@@ -38,7 +38,7 @@ Visit `http://localhost:8000`. Changes to HTML, CSS, or JavaScript can be viewed
 
 Each HTML file is a standalone page that loads the shared `styles.css` and `script.js`. Headers, footers, navigation, and contact details are repeated in the page files; update each occurrence when changing shared content.
 
-`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, the FAQ accordion, contact form submission, scroll reveal animations, logo fallback, and the footer year. Product artwork is generated using inline SVG motifs.
+`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, the FAQ accordion, contact form submission, scroll reveal animations, logo fallback, and the footer year. Product artwork currently uses inline SVG placeholders. Each product has an `images` array ready for product photos; the first image is displayed when supplied. Expandable product details show pack specifications, fragrance, ingredients, usage, safety instructions, and SKU. Missing cup weight and stock quantities are left undisplayed.
 
 WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in each element's `data-wa` attribute. The contact form opens WhatsApp with the entered details in a prefilled message; it does not submit data to a server.
 
@@ -46,7 +46,7 @@ WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in ea
 
 ## Common changes
 
-- **Products and prices:** Update `PRODUCTS` in `script.js`. The `featured` flag controls inclusion on the home page, and `cat` determines the shop filter category.
+- **Products and prices:** Update `PRODUCTS` in `script.js`. The `featured` flag controls inclusion on the home page, and `cat` determines the shop filter category (`dhoop` or `cups`). The current catalogue contains four dhoop fragrances and one Sambrani cup product. MRP is shown alongside the selling price only when it is higher.
 - **WhatsApp destination:** Update `WHATSAPP_NUMBER` in `script.js`, then check phone numbers and direct WhatsApp links in the HTML files.
 - **Contact information:** Update the relevant page content, repeated footers, and policy text together.
 - **Brand styling:** Update the CSS custom properties in `styles.css`. Replace `assets/logo.png` to change the logo.

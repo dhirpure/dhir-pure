@@ -7,22 +7,126 @@ const BRAND = "DHIR PURE";
 
 /* ---- Product catalogue (edit freely) ---- */
 const PRODUCTS = [
-  { id: "chandan",  name: "Chandan Dhoop Sticks", fragrance: "Sandalwood", cat: "dhoop",   price: 149, mrp: 199,  tag: "",          motif: "sandal", featured: true,
-    desc: "Slow-burning sandalwood dhoop for a calm, sacred space." },
-  { id: "gulab",    name: "Gulab Dhoop Sticks",   fragrance: "Rose",       cat: "dhoop",   price: 149, mrp: 199, tag: "",           motif: "rose",  featured: true,
-    desc: "Soft rose notes that linger gently after every aarti." },
-  { id: "kesar",    name: "Kesar Premium Dhoop",  fragrance: "Saffron",    cat: "premium", price: 249, mrp: 320, tag: "",           motif: "saffron", featured: true,
-    desc: "A regal saffron blend crafted for special pujas." },
-  { id: "loban",    name: "Loban Sambrani Cups",  fragrance: "Frankincense", cat: "cups",  price: 179, mrp: 220, tag: "",           motif: "cup",   featured: true,
-    desc: "Charcoal-free sambrani cups that purify the air instantly." },
-  { id: "mogra",    name: "Mogra Dhoop Sticks",   fragrance: "Jasmine",    cat: "dhoop",   price: 149, mrp: 199, tag: "",          motif: "jasmine",
-    desc: "Fresh mogra fragrance for daily morning prayers." },
-  { id: "havan",    name: "Havan Sambrani Cups",  fragrance: "Herbal Havan", cat: "cups",  price: 199, mrp: 260, tag: "",          motif: "cup",
-    desc: "A traditional havan blend of herbs, ghee and resins." },
-  { id: "oudh",     name: "Oudh Premium Dhoop",   fragrance: "Agarwood",   cat: "premium", price: 299, mrp: 380, tag: "",   motif: "saffron",
-    desc: "Deep, woody oudh for an elevated meditative mood." },
-  { id: "combo",    name: "Bhakti Combo Box",     fragrance: "Assorted",   cat: "combo",   price: 499, mrp: 699, tag: "",     motif: "combo",
-    desc: "A curated box of our four most-loved fragrances." },
+  {
+    "id": "chandan",
+    "sku": "DP-SND-00001",
+    "name": "Chandan Dhoop Sticks",
+    "fragrance": "Sandalwood",
+    "cat": "dhoop",
+    "price": 249,
+    "mrp": 249,
+    "tag": "",
+    "motif": "sandal",
+    "featured": true,
+    "images": [],
+    "desc": "Welcome a temple-like atmosphere into your home with Chandan Dhoop Sticks, inspired by Vedic traditions and blended with sacred tirth and Dham Raj.",
+    "scent": "Rich, woody, and intensely creamy authentic Mysore Sandalwood aroma with sweet, balsamic undertones that linger for hours.",
+    "highlights": "Charcoal-free and bamboo-less, with sacred Dham Raj and a delicate white ash.",
+    "packSize": "1 pack · 100 g",
+    "netWeight": "100 g",
+    "stickSize": "3.5 inches",
+    "boxDimensions": "3.5 × 1.5 × 5 inches",
+    "ingredients": "Organic Desi Cow Dung Powder, Premium Cedarwood bark Powder, havan herbs, Pure Jigat powder (Natural Binder), Sacred Tirth & Dham's Raj, Premium Indian Attars, and Essential Perfumes and a DHIRPURE special ingredient.",
+    "usage": "Hold the tip of the dhoop stick over a flame until it catches fire. Let it burn for a few seconds, then gently blow out the flame. Place it securely in the provided heat-resistant dhoop holder.",
+    "safety": "Keep away from flammable objects, children, and pets. Burn only in well-ventilated areas. Never leave a burning incense stick unattended.",
+    "stock": null
+  },
+  {
+    "id": "kasturi",
+    "sku": "DP-KAS-00003",
+    "name": "Kasturi Dhoop Sticks",
+    "fragrance": "Kasturi Musk",
+    "cat": "dhoop",
+    "price": 249,
+    "mrp": 249,
+    "tag": "",
+    "motif": "sandal",
+    "featured": true,
+    "images": [],
+    "desc": "Bring a deep, earthy musk fragrance to your yoga space, meditation corner or daily pooja with sun-dried Kasturi Dhoop Sticks.",
+    "scent": "Deep, earthy musk with a subtle warm, amber sweetness.",
+    "highlights": "Charcoal-free and bamboo-less, with sacred tirth elements and natural plant-based resins.",
+    "packSize": "1 pack · 100 g",
+    "netWeight": "100 g",
+    "stickSize": "3.5 inches",
+    "boxDimensions": "3.5 × 1.5 × 5 inches",
+    "ingredients": "Organic Desi Cow Dung Powder, Premium Cedarwood bark Powder, havan herbs, Pure Kasturi Musk Attar Blend, Jigat powder (natural binder), Sacred Dham Raj, and Pure Essential Oils and a DHIRPURE special ingredient.",
+    "usage": "Tilt the stick at an angle and light the tip. Wait for it to glow evenly, blow out the active flame, and position it on the incense holder.",
+    "safety": "Do not place on painted or plastic surfaces. Ensure the falling white ash lands inside a metallic or ceramic tray. Keep out of reach of children.",
+    "stock": null
+  },
+  {
+    "id": "guggal",
+    "sku": "DP-GGL-00002",
+    "name": "Guggal Dhoop Sticks",
+    "fragrance": "Guggal Resin",
+    "cat": "dhoop",
+    "price": 249,
+    "mrp": 249,
+    "tag": "",
+    "motif": "sandal",
+    "featured": true,
+    "images": [],
+    "desc": "A warm, resinous fragrance inspired by temple rituals, blending Indian Guggal resin with Desi cow dung powder for your daily pooja.",
+    "scent": "Warm, intensely resinous, smoky-sweet, and traditional balsamic fragrance reminiscent of ancient temple rituals.",
+    "highlights": "Made with premium Indian Guggal resin and Desi cow dung powder, without charcoal.",
+    "packSize": "1 pack · 100 g",
+    "netWeight": "100 g",
+    "stickSize": "3.5 inches",
+    "boxDimensions": "3.5 × 1.5 × 5 inches",
+    "ingredients": "High-Grade Pure Guggal Resin, Organic Desi Cow Dung Powder, Himalayan Deodar Wood Powder, Kapur Kachri, Nagarmotha, Jigat Binder, and Sacred Tirth Raj, and a DHIRPURE special ingredient.",
+    "usage": "Ignite the top end of the stick. Allow the flame to steady for 5 seconds, then blow it out to let the resinous smoke rise gently.",
+    "safety": "Place on a stable, fireproof surface. Ensure the ash collector is large enough to safely catch all remnants.",
+    "stock": null
+  },
+  {
+    "id": "flower-fulwadi",
+    "sku": "DP-FLR-00005",
+    "name": "Flower Fulwadi Dhoop Sticks",
+    "fragrance": "Floral Bouquet",
+    "cat": "dhoop",
+    "price": 249,
+    "mrp": 249,
+    "tag": "",
+    "motif": "sandal",
+    "featured": true,
+    "images": [],
+    "desc": "Welcome the fragrance of a blooming garden with Flower Fulwadi Dhoop Sticks, made with dried sacred flower petals and floral attars.",
+    "scent": "A refreshing, uplifting bouquet of sacred Indian flowers (Rose, Marigold, Jasmin) beautifully balanced with clean, sweet floral highlights.",
+    "highlights": "Made with upcycled sacred flower petals, without bamboo or charcoal.",
+    "packSize": "1 pack · 100 g",
+    "netWeight": "100 g",
+    "stickSize": "3.5 inches",
+    "boxDimensions": "3.5 × 1.5 × 5 inches",
+    "ingredients": "Dried Sacred Flower Petals, Himalayan Deodar Wood Powder, Organic Cow Dung Powder, Pure Mogra & Rose Attars, Jigat Natural Binder, and Blessed Dham Raj, and a DHIRPURE special ingredient.",
+    "usage": "Burn the tip of the stick till a small flame appears. Gently fan or blow out the flame to let the floral essential oils vaporize smoothly.",
+    "safety": "Keep away from drafts, open windows, or direct fans to maintain a smooth burn. Do not ingest or place in direct contact with skin.",
+    "stock": null
+  },
+  {
+    "id": "guggal-loban-cups",
+    "sku": "DP-SHC-00006",
+    "name": "Guggal Loban Sambrani Havan Cups",
+    "fragrance": "Guggal & Loban",
+    "cat": "cups",
+    "price": 149,
+    "mrp": 199,
+    "tag": "",
+    "motif": "cup",
+    "featured": true,
+    "images": [],
+    "desc": "Bring a traditional havan fragrance into your space with ready-to-light Guggal Loban Sambrani Havan Cups, filled with resins and herbs.",
+    "scent": "Deeply intense, mystical, and traditional wood-resin aroma. The dry, sweet crystallization of Loban merges perfectly with the deep, grounding, sacred notes of pure Guggal.",
+    "highlights": "A charcoal-free cup made with herbs and cow dung, filled with Guggal and Loban resins. Includes a complimentary metal/clay burner plate.",
+    "packSize": "12 cups + complimentary burner plate",
+    "netWeight": null,
+    "stickSize": null,
+    "boxDimensions": "14 × 10 × 4 cm",
+    "ingredients": "Pure Benzoin (Loban Crystals), Premium Guggul Resin, Bhimseni Camphor, Organic Desi Cow Dung Base, Jatamansi, Sugandhi Kokila, and Sprinkled with Sacred Tirth & Dham Raj.",
+    "usage": "Hold the bottom of the sambrani cup and tilt it. Light the top outer rim evenly all around using a lighter or matchstick until the rim glows red. Place it upright on the included metal/clay stand and let the inner resin catch fire naturally.",
+    "safety": "High smoke output product—ideal for open spaces or rooms with good ventilation. Place exclusively on a steady, fireproof metal or earthenware plate. Do not touch while burning as the outer cup gets extremely hot.",
+    "stock": null
+  }
 ];
 
 /* ---- Tiny SVG motifs used as placeholder product art (swap for real photos later) ---- */
@@ -55,23 +159,38 @@ function waLink(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
 }
 
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[char]);
+}
+
 function productCard(p) {
-  const tag = p.tag ? `<span class="card-tag ${p.tag === "Premium" || p.tag === "Value" ? "gold" : ""}">${p.tag}</span>` : "";
-  const msg = `Namaste ${BRAND} 🙏, I'd like to order: ${p.name} (${p.fragrance}) — ₹${p.price}.`;
+  const msg = `Namaste ${BRAND} 🙏, I'd like to order: ${p.name} — ${p.packSize} (SKU: ${p.sku}) — ₹${p.price}.`;
+  const details = [
+    ["Fragrance", p.scent], ["What makes it distinctive", p.highlights],
+    ["Pack size", p.packSize], ["Net weight", p.netWeight],
+    ["Stick size", p.stickSize], ["Box dimensions", p.boxDimensions],
+    ["Ingredients", p.ingredients], ["How to use", p.usage],
+    ["Safety precautions", p.safety], ["SKU", p.sku]
+  ].filter(([, value]) => value);
   return `
   <article class="card reveal">
     <div class="card-media" style="background:${mediaBg()}">
-      ${tag}
-      ${motifSVG(p.motif)}
+      ${p.images.length ? `<img src="${escapeHTML(p.images[0])}" alt="${escapeHTML(p.name)}" loading="lazy" />` : motifSVG(p.motif)}
     </div>
     <div class="card-body">
-      <span class="fragrance">${p.fragrance}</span>
-      <h3>${p.name}</h3>
-      <p class="desc">${p.desc}</p>
+      <span class="fragrance">${escapeHTML(p.fragrance)}</span>
+      <h3>${escapeHTML(p.name)}</h3>
+      <p class="product-pack">${escapeHTML(p.packSize)}</p>
+      <p class="desc">${escapeHTML(p.desc)}</p>
       <div class="card-meta">
-        <span class="price">₹${p.price}<small>₹${p.mrp}</small></span>
-        <span class="stars">★★★★★</span>
+        <span class="price">₹${p.price}${p.mrp > p.price ? `<small><span class="sr-only">MRP </span>₹${p.mrp}</small>` : ""}</span>
       </div>
+      <details class="product-details">
+        <summary>Product details</summary>
+        <dl>${details.map(([label, value]) => `<dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd>`).join("")}</dl>
+      </details>
       <a class="btn btn-wa btn-sm" href="${waLink(msg)}" target="_blank" rel="noopener">
         ${waGlyph()} Order on WhatsApp
       </a>
