@@ -11,6 +11,8 @@ The site uses HTML, CSS, and vanilla JavaScript. There is no framework, package 
 ```text
 .
 ├── index.html                           # Home page and featured products
+├── product.html                         # Product detail page, selected by ?id=
+├── product-page.js                      # Detail layout, tabs, quantity and WhatsApp ordering
 ├── shop.html                            # Product catalogue and category filters
 ├── about.html                           # Brand story, ingredients, promise, and FAQ
 ├── contact.html                         # Contact details and WhatsApp enquiry form
@@ -38,7 +40,7 @@ Visit `http://localhost:8000`. Changes to HTML, CSS, or JavaScript can be viewed
 
 Each HTML file is a standalone page that loads the shared `styles.css` and `script.js`. Headers, footers, navigation, and contact details are repeated in the page files; update each occurrence when changing shared content.
 
-`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, the FAQ accordion, contact form submission, scroll reveal animations, logo fallback, and the footer year. The four individual dhoop fragrances and the combo use product photos in `assets/products/`; The 12-cup Sambrani pack uses a studio product image; the 30-cup pack currently uses an inline SVG placeholder. Each product has an `images` array ready for product photos; the first image is displayed initially. Products with multiple images show view selectors; `imageLabels` can name each view (Main, Back, Infographic, Close-up, Lifestyle). Clicking a product photo opens its full-size image. Expandable product details show pack specifications, fragrance, ingredients, usage, safety instructions, and SKU. Missing cup weight and stock quantities are left undisplayed.
+`script.js` defines the `PRODUCTS` catalogue and renders product cards into the home and shop pages. It also handles category filtering, mobile navigation, WhatsApp links, the FAQ accordion, contact form submission, scroll reveal animations, logo fallback, and the footer year. The four individual dhoop fragrances and the combo use product photos in `assets/products/`; The 12-cup Sambrani pack uses a studio product image; the 30-cup pack currently uses an inline SVG placeholder. Each product has an `images` array ready for product photos; the first image is displayed initially. Products with multiple images show view selectors; `imageLabels` can name each view (Main, Back, Infographic, Close-up, Lifestyle). Clicking a product photo opens its full-size image. Dedicated product pages show an image gallery, pack selection for Sambrani cups, quantity controls, product information tabs, and related products. Orders open WhatsApp with the selected SKU, pack, quantity, and product total. Missing cup weight and stock quantities are left undisplayed.
 
 WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in each element's `data-wa` attribute. The contact form opens WhatsApp with the entered details in a prefilled message; it does not submit data to a server.
 
@@ -54,6 +56,6 @@ WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in ea
 
 ## Validation and hosting
 
-There is no automated test suite configured. Before publishing, check all page links, mobile navigation, product filters, FAQ interactions, and WhatsApp messages. Review policy pages at both mobile and desktop widths.
+There is no automated test suite configured. Before publishing, check all page links, mobile navigation, product filters, product galleries, detail tabs, quantity controls, FAQ interactions, and WhatsApp messages. Review policy pages at both mobile and desktop widths.
 
 Deploy the website directory to a static hosting service. Use the directory containing `index.html` as the site root and publish the files as-is; no build command is required.

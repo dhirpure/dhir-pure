@@ -258,7 +258,7 @@ function productGallery(p) {
       </a>
     </div>
     ${p.images.length > 1 ? `<div class="product-image-options" role="group" aria-label="${escapeHTML(p.name)} images">
-      ${p.images.map((src, index) => `<button type="button" class="product-image-option" data-image-index="${index}" aria-pressed="${index === 0}">${escapeHTML(labels[index] || `Image ${index + 1}`)}</button>`).join("")}
+      ${p.images.map((src, index) => `<button type="button" class="product-image-option" data-image-index="${index}" aria-pressed="${index === 0}"><img src="${escapeHTML(src)}" alt="" loading="lazy" /><span>${escapeHTML(labels[index] || `Image ${index + 1}`)}</span></button>`).join("")}
     </div>` : ""}
   </div>`;
 }
@@ -286,28 +286,18 @@ function setupProductGalleries() {
 
 function productCard(p) {
   const msg = `Namaste ${BRAND} 🙏, I'd like to order: ${p.name} — ${p.packSize} (SKU: ${p.sku}) — ₹${p.price}.`;
-  const details = [
-    ["Fragrance", p.scent], ["What makes it distinctive", p.highlights],
-    ["Pack size", p.packSize], ["Net weight", p.netWeight],
-    ["Stick size", p.stickSize], ["Box dimensions", p.boxDimensions],
-    ["Ingredients", p.ingredients], ["How to use", p.usage],
-    ["Safety precautions", p.safety], ["SKU", p.sku]
-  ].filter(([, value]) => value);
   return `
   <article class="card reveal">
     ${productGallery(p)}
     <div class="card-body">
       <span class="fragrance">${escapeHTML(p.fragrance)}</span>
-      <h3>${escapeHTML(p.name)}</h3>
+      <h3><a href="product.html?id=${encodeURIComponent(p.id)}">${escapeHTML(p.name)}</a></h3>
       <p class="product-pack">${escapeHTML(p.packSize)}</p>
       <p class="desc">${escapeHTML(p.desc)}</p>
       <div class="card-meta">
         <span class="price">₹${p.price}${p.mrp > p.price ? `<small><span class="sr-only">MRP </span>₹${p.mrp}</small>` : ""}</span>
       </div>
-      <details class="product-details">
-        <summary>Product details</summary>
-        <dl>${details.map(([label, value]) => `<dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd>`).join("")}</dl>
-      </details>
+      <a class="product-view-link" href="product.html?id=${encodeURIComponent(p.id)}">View product <span aria-hidden="true">↗</span></a>
       <a class="btn btn-wa btn-sm" href="${waLink(msg)}" target="_blank" rel="noopener">
         ${waGlyph()} Order on WhatsApp
       </a>
