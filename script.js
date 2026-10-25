@@ -45,7 +45,9 @@ const PRODUCTS = [
     "motif": "sandal",
     "featured": true,
     "images": [
-      "assets/products/kasturi-front.jpg"
+      "assets/products/kasturi-front.jpg",
+      "assets/products/kasturi-back-studio.png",
+      "assets/products/kasturi-back-original.jpg"
     ],
     "desc": "Bring a deep, earthy musk fragrance to your yoga space, meditation corner or daily pooja with sun-dried Kasturi Dhoop Sticks.",
     "scent": "Deep, earthy musk with a subtle warm, amber sweetness.",
@@ -57,7 +59,12 @@ const PRODUCTS = [
     "ingredients": "Organic Desi Cow Dung Powder, Premium Cedarwood bark Powder, havan herbs, Pure Kasturi Musk Attar Blend, Jigat powder (natural binder), Sacred Dham Raj, and Pure Essential Oils and a DHIRPURE special ingredient.",
     "usage": "Tilt the stick at an angle and light the tip. Wait for it to glow evenly, blow out the active flame, and position it on the incense holder.",
     "safety": "Do not place on painted or plastic surfaces. Ensure the falling white ash lands inside a metallic or ceramic tray. Keep out of reach of children.",
-    "stock": null
+    "stock": null,
+    "imageLabels": [
+      "Main",
+      "Back",
+      "Original label"
+    ]
   },
   {
     "id": "guggal",
@@ -223,6 +230,42 @@ function escapeHTML(value) {
   })[char]);
 }
 
+function productGallery(p) {
+  if (!p.images.length) return `<div class="card-media" style="background:${mediaBg()}">${motifSVG(p.motif)}</div>`;
+  const labels = p.imageLabels || ["Main", "Back", "Infographic", "Close-up", "Lifestyle"];
+  return `<div class="product-gallery" data-product-id="${escapeHTML(p.id)}">
+    <div class="card-media" style="background:${mediaBg()}">
+      <a class="product-image-link" href="${escapeHTML(p.images[0])}" target="_blank" rel="noopener" aria-label="View full-size ${escapeHTML(p.name)} — ${escapeHTML(labels[0])}">
+        <img class="product-gallery-image" src="${escapeHTML(p.images[0])}" alt="${escapeHTML(p.name)} — ${escapeHTML(labels[0])}" loading="lazy" />
+      </a>
+    </div>
+    ${p.images.length > 1 ? `<div class="product-image-options" role="group" aria-label="${escapeHTML(p.name)} images">
+      ${p.images.map((src, index) => `<button type="button" class="product-image-option" data-image-index="${index}" aria-pressed="${index === 0}">${escapeHTML(labels[index] || `Image ${index + 1}`)}</button>`).join("")}
+    </div>` : ""}
+  </div>`;
+}
+
+function setupProductGalleries() {
+  document.addEventListener("click", event => {
+    const button = event.target.closest(".product-image-option");
+    if (!button) return;
+    const gallery = button.closest(".product-gallery");
+    const product = PRODUCTS.find(p => p.id === gallery.dataset.productId);
+    const index = Number(button.dataset.imageIndex);
+    if (!product || !product.images[index]) return;
+    const label = (product.imageLabels || ["Main", "Back", "Infographic", "Close-up", "Lifestyle"])[index] || `Image ${index + 1}`;
+    const image = gallery.querySelector(".product-gallery-image");
+    image.src = product.images[index];
+    image.alt = `${product.name} — ${label}`;
+    const link = gallery.querySelector(".product-image-link");
+    link.href = product.images[index];
+    link.setAttribute("aria-label", `View full-size ${product.name} — ${label}`);
+    gallery.querySelectorAll(".product-image-option").forEach(option => {
+      option.setAttribute("aria-pressed", String(option === button));
+    });
+  });
+}
+
 function productCard(p) {
   const msg = `Namaste ${BRAND} 🙏, I'd like to order: ${p.name} — ${p.packSize} (SKU: ${p.sku}) — ₹${p.price}.`;
   const details = [
@@ -234,9 +277,7 @@ function productCard(p) {
   ].filter(([, value]) => value);
   return `
   <article class="card reveal">
-    <div class="card-media" style="background:${mediaBg()}">
-      ${p.images.length ? `<img src="${escapeHTML(p.images[0])}" alt="${escapeHTML(p.name)}" loading="lazy" />` : motifSVG(p.motif)}
-    </div>
+    ${productGallery(p)}
     <div class="card-body">
       <span class="fragrance">${escapeHTML(p.fragrance)}</span>
       <h3>${escapeHTML(p.name)}</h3>
@@ -374,6 +415,7 @@ function setYear() {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
+  setupProductGalleries();
   setupNav();
   setupWhatsApp();
   setupFAQ();
