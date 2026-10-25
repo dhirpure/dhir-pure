@@ -46,7 +46,7 @@ WhatsApp links are generated from `WHATSAPP_NUMBER` and the message stored in ea
 
 ## Common changes
 
-- **Products and prices:** Update `PRODUCTS` in `script.js`. The `featured` flag controls inclusion on the home page, and `cat` determines the shop filter category (`dhoop` or `cups`). The current catalogue contains four dhoop fragrances and two Sambrani cup pack sizes. MRP is shown alongside the selling price only when it is higher.
+- **Products and prices:** Update `PRODUCTS` in `script.js`. The `featured` flag controls inclusion on the home page, and `cat` determines the shop filter category (`dhoop`, `cups`, or `combo`). The current catalogue contains four dhoop fragrances, two Sambrani cup pack sizes, and a four-fragrance combo. MRP is shown alongside the selling price only when it is higher.
 - **WhatsApp destination:** Update `WHATSAPP_NUMBER` in `script.js`, then check phone numbers and direct WhatsApp links in the HTML files.
 - **Contact information:** Update the relevant page content, repeated footers, and policy text together.
 - **Brand styling:** Update the CSS custom properties in `styles.css`. Replace `assets/logo.png` to change the logo.

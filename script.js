@@ -150,6 +150,32 @@ const PRODUCTS = [
     "usage": "Hold the bottom of the sambrani cup and tilt it. Light the top outer rim evenly all around using a lighter or matchstick until the rim glows red. Place it upright on the included metal/clay stand and let the inner resin catch fire naturally.",
     "safety": "High smoke output product—ideal for open spaces or rooms with good ventilation. Place exclusively on a steady, fireproof metal or earthenware plate. Do not touch while burning as the outer cup gets extremely hot.",
     "stock": null
+  },
+  {
+    "id": "four-fragrance-combo",
+    "sku": "DP-SKGF-00001",
+    "name": "4-in-1 Dhoop Sticks Combo",
+    "fragrance": "Chandan · Kasturi · Guggal · Flower Fulwadi",
+    "cat": "combo",
+    "price": 699,
+    "mrp": 996,
+    "tag": "",
+    "motif": "combo",
+    "featured": true,
+    "images": [
+      "assets/products/four-fragrance-combo.png"
+    ],
+    "desc": "Four fragrances, one sacred experience. Discover Chandan, Kasturi, Guggal and Flower Fulwadi in a collection for daily pooja, meditation and a fragrant home.",
+    "scent": "Creamy sandalwood, warm earthy musk, traditional Guggal resin and a fresh floral bouquet.",
+    "highlights": "One 100 g pack each of Chandan, Kasturi, Guggal and Flower Fulwadi dhoop sticks. All four fragrances are charcoal-free and bamboo-less.",
+    "packSize": "4 packs · 100 g each",
+    "netWeight": "400 g total (4 × 100 g)",
+    "stickSize": "3.5 inches",
+    "boxDimensions": null,
+    "ingredients": "Chandan Dhoop Sticks: Organic Desi Cow Dung Powder, Premium Cedarwood bark Powder, havan herbs, Pure Jigat powder (Natural Binder), Sacred Tirth & Dham's Raj, Premium Indian Attars, and Essential Perfumes and a DHIRPURE special ingredient. | Kasturi Dhoop Sticks: Organic Desi Cow Dung Powder, Premium Cedarwood bark Powder, havan herbs, Pure Kasturi Musk Attar Blend, Jigat powder (natural binder), Sacred Dham Raj, and Pure Essential Oils and a DHIRPURE special ingredient. | Guggal Dhoop Sticks: High-Grade Pure Guggal Resin, Organic Desi Cow Dung Powder, Himalayan Deodar Wood Powder, Kapur Kachri, Nagarmotha, Jigat Binder, and Sacred Tirth Raj, and a DHIRPURE special ingredient. | Flower Fulwadi Dhoop Sticks: Dried Sacred Flower Petals, Himalayan Deodar Wood Powder, Organic Cow Dung Powder, Pure Mogra & Rose Attars, Jigat Natural Binder, and Blessed Dham Raj, and a DHIRPURE special ingredient.",
+    "usage": "Hold the tip of the dhoop stick over a flame until it catches fire. Let it burn for a few seconds, then gently blow out the flame. Place it securely in the provided heat-resistant dhoop holder.",
+    "safety": "Burn in a well-ventilated area on a stable, heat-resistant holder. Keep away from flammable objects, children and pets. Never leave burning incense unattended.",
+    "stock": null
   }
 ];
 
