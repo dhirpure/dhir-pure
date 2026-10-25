@@ -248,14 +248,15 @@ function escapeHTML(value) {
   })[char]);
 }
 
-function productGallery(p) {
-  if (!p.images.length) return `<div class="card-media" style="background:${mediaBg()}">${motifSVG(p.motif)}</div>`;
+function productGallery(p, detailPage = false) {
+  const productUrl = `product.html?id=${encodeURIComponent(p.id)}`;
+  if (!p.images.length) return `<div class="card-media" style="background:${mediaBg()}">${detailPage ? motifSVG(p.motif) : `<a class="product-image-link" href="${productUrl}" aria-label="View ${escapeHTML(p.name)}">${motifSVG(p.motif)}</a>`}</div>`;
   const labels = p.imageLabels || ["Main", "Back", "Infographic", "Close-up", "Lifestyle"];
   return `<div class="product-gallery" data-product-id="${escapeHTML(p.id)}">
     <div class="card-media" style="background:${mediaBg()}">
-      <a class="product-image-link" href="${escapeHTML(p.images[0])}" target="_blank" rel="noopener" aria-label="View full-size ${escapeHTML(p.name)} — ${escapeHTML(labels[0])}">
+      ${detailPage ? '<div class="product-image-link">' : `<a class="product-image-link" href="${productUrl}" aria-label="View ${escapeHTML(p.name)}">`}
         <img class="product-gallery-image" src="${escapeHTML(p.images[0])}" alt="${escapeHTML(p.name)} — ${escapeHTML(labels[0])}" loading="lazy" />
-      </a>
+      ${detailPage ? '</div>' : '</a>'}
     </div>
     ${p.images.length > 1 ? `<div class="product-image-options" role="group" aria-label="${escapeHTML(p.name)} images">
       ${p.images.map((src, index) => `<button type="button" class="product-image-option" data-image-index="${index}" aria-pressed="${index === 0}"><img src="${escapeHTML(src)}" alt="" loading="lazy" /><span>${escapeHTML(labels[index] || `Image ${index + 1}`)}</span></button>`).join("")}
@@ -275,9 +276,6 @@ function setupProductGalleries() {
     const image = gallery.querySelector(".product-gallery-image");
     image.src = product.images[index];
     image.alt = `${product.name} — ${label}`;
-    const link = gallery.querySelector(".product-image-link");
-    link.href = product.images[index];
-    link.setAttribute("aria-label", `View full-size ${product.name} — ${label}`);
     gallery.querySelectorAll(".product-image-option").forEach(option => {
       option.setAttribute("aria-pressed", String(option === button));
     });
@@ -297,7 +295,6 @@ function productCard(p) {
       <div class="card-meta">
         <span class="price">₹${p.price}${p.mrp > p.price ? `<small><span class="sr-only">MRP </span>₹${p.mrp}</small>` : ""}</span>
       </div>
-      <a class="product-view-link" href="product.html?id=${encodeURIComponent(p.id)}">View product <span aria-hidden="true">↗</span></a>
       <a class="btn btn-wa btn-sm" href="${waLink(msg)}" target="_blank" rel="noopener">
         ${waGlyph()} Order on WhatsApp
       </a>

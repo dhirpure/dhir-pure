@@ -8,7 +8,7 @@ function productPageMarkup(p) {
   return `
     <nav class="product-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="shop.html">Collection</a><span>/</span><span>${e(p.name)}</span></nav>
     <section class="product-layout" aria-labelledby="product-title">
-      <div class="product-visual">${productGallery(p)}<p class="image-hint">${p.images.length > 1 ? "Select a view · Click the image to see it full size" : p.images.length ? "Click the image to see it full size" : "Product photography coming soon"}</p></div>
+      <div class="product-visual">${productGallery(p, true)}<p class="image-hint">${p.images.length > 1 ? "Select Front or Back to explore the packaging" : p.images.length ? "" : "Product photography coming soon"}</p></div>
       <div class="product-summary">
         <p class="product-kicker">DHIRPURE™ · ${p.cat === "cups" ? "Sambrani Havan Cups" : p.cat === "combo" ? "Fragrance Collection" : "Dhoop Sticks"}</p>
         <h1 id="product-title">${e(p.name)}</h1>
